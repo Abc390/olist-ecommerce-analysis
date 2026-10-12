@@ -1,0 +1,14 @@
+USE olist;
+CREATE INDEX idx_orders_order_id    ON orders(order_id);
+CREATE INDEX idx_orders_customer_id ON orders(customer_id);
+CREATE INDEX idx_orders_purchase    ON orders(order_purchase_timestamp);
+CREATE INDEX idx_items_order_id     ON order_items(order_id);
+CREATE INDEX idx_items_product_id   ON order_items(product_id);
+CREATE INDEX idx_items_seller_id    ON order_items(seller_id);
+CREATE INDEX idx_customers_id       ON customers(customer_id);
+CREATE INDEX idx_customers_unique   ON customers(customer_unique_id);
+CREATE INDEX idx_products_id        ON products(product_id);
+CREATE INDEX idx_sellers_id         ON sellers(seller_id);
+CREATE INDEX idx_reviews_order_id   ON order_reviews(order_id);
+CREATE INDEX idx_payments_order_id  ON order_payments(order_id);
+CREATE INDEX idx_trans_name         ON product_category_name_translation(product_category_name);
